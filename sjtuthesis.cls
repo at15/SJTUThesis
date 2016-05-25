@@ -300,7 +300,8 @@
 \newcommand\chairman[1]{\def\sjtu@value@chairman{#1}}
 
 % “绘制”SJTU中文标题页
-\renewcommand\maketitle[1]{%
+% 图片来自 http://vi.sjtu.edu.cn/
+\renewcommand\maketitle[1]{
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
@@ -311,6 +312,11 @@
   {\fangsong\zihao{4}}
   \def\tabcolsep{1pt}
   \def\arraystretch{1.5}
+  % SJTU logo
+  \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{logo.png}
+  \end{figure}
   \begin{tabular}{rl}
     \ifsjtu@review
       \begin{CJKfilltwosides}{4em}\heiti\sjtu@label@author\end{CJKfilltwosides} & \underline{\makebox[150pt]{}}\\
